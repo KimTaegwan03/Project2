@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -39,11 +40,13 @@ void filestat2(){
 
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(){
+    time1 = (struct tm*)malloc(sizeof(struct tm));
     *time1 = *localtime(&stat1.st_mtime);
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2(){
+    time2 = (struct tm*)malloc(sizeof(struct tm));
     *time2 = *localtime(&stat2.st_mtime);
 }
 
