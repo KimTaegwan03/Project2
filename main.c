@@ -69,9 +69,9 @@ void timecmp(){
         printf("same time\n");
     } else if (time1->tm_hour < time2->tm_hour ||
               (time1->tm_hour == time2->tm_hour && time1->tm_min < time2->tm_min)) {
-        printf("time1 is early\n");
+        printf("text1 is early\n");
     } else {
-        printf("time2 is early\n");
+        printf("text2 is early\n");
     }
      printf("\n");
 }
